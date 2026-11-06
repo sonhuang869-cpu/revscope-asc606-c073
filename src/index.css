@@ -1,0 +1,84 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    @apply bg-[#0A0F1E] text-gray-100 font-sans antialiased;
+    margin: 0;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #111827;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #1E3A5F;
+    border-radius: 3px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #4F8EF7;
+  }
+}
+
+@layer components {
+  .num {
+    font-family: 'JetBrains Mono', monospace;
+  }
+
+  .table-row-hover {
+    @apply transition-colors cursor-pointer;
+  }
+  .table-row-hover:hover {
+    background-color: rgba(255,255,255,0.04);
+  }
+
+  .status-active {
+    @apply text-green-400 text-xs font-medium px-2 py-0.5 rounded;
+    background-color: rgba(52,211,153,0.12);
+    border: 1px solid rgba(52,211,153,0.2);
+  }
+  .status-draft {
+    @apply text-gray-400 text-xs font-medium px-2 py-0.5 rounded;
+    background-color: rgba(107,114,128,0.12);
+    border: 1px solid rgba(107,114,128,0.2);
+  }
+  .status-modified {
+    @apply text-amber-400 text-xs font-medium px-2 py-0.5 rounded;
+    background-color: rgba(245,158,11,0.12);
+    border: 1px solid rgba(245,158,11,0.2);
+  }
+  .status-terminated {
+    @apply text-red-400 text-xs font-medium px-2 py-0.5 rounded;
+    background-color: rgba(239,68,68,0.12);
+    border: 1px solid rgba(239,68,68,0.2);
+  }
+
+  .card {
+    @apply bg-[#111827] rounded-xl;
+    border: 1px solid rgba(255,255,255,0.08);
+  }
+
+  .btn-primary {
+    @apply bg-[#4F8EF7] text-white font-medium px-4 py-2 rounded-lg transition-colors text-sm;
+  }
+  .btn-primary:hover {
+    background-color: #3a7de0;
+  }
+
+  .btn-secondary {
+    @apply text-gray-300 font-medium px-4 py-2 rounded-lg transition-colors text-sm;
+    background-color: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.1);
+  }
+  .btn-secondary:hover {
+    background-color: rgba(255,255,255,0.12);
+  }
+}
